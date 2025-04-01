@@ -1,0 +1,90 @@
+2025-03-20 20:29:18,000 - database_repair - INFO - Starting database diagnostic and repair...
+2025-03-20 20:29:18,001 - database_repair - INFO - Checking database structure...
+2025-03-20 20:29:18,004 - database_repair - ERROR - Primary key not correctly set on 'id' column
+2025-03-20 20:29:18,005 - database_repair - INFO - Backing up audits table before recreating
+2025-03-20 20:29:18,005 - database_repair - ERROR - Error checking database structure: there is already another table or index with this name: audits_backup
+2025-03-20 20:29:18,012 - database_repair - ERROR - Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Slackabot\Slackabot\database_repair.py", line 76, in check_database_structure
+    cursor.execute("ALTER TABLE audits RENAME TO audits_backup")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: there is already another table or index with this name: audits_backup
+
+2025-03-20 20:29:18,017 - database_repair - INFO - Diagnostic and repair completed
+2025-03-20 20:31:36,277 - database_repair - INFO - Starting database diagnostic and repair...
+2025-03-20 20:31:36,278 - database_repair - INFO - Checking database connections and tables...
+2025-03-20 20:31:36,280 - database_repair - ERROR - ID column is not properly set as primary key
+2025-03-20 20:31:36,280 - database_repair - INFO - Database structure needs repair. Fixing...
+2025-03-20 20:31:36,281 - database_repair - INFO - Fixing table structure...
+2025-03-20 20:31:36,282 - database_repair - INFO - Renaming audits table to audits_backup_1742482896
+2025-03-20 20:31:36,284 - database_repair - INFO - Creating new audits table with correct schema
+2025-03-20 20:31:36,284 - database_repair - INFO - Copying valid data from audits_backup_1742482896
+2025-03-20 20:31:36,285 - database_repair - INFO - Creating index on audits table
+2025-03-20 20:31:36,285 - database_repair - ERROR - Error fixing table structure: index idx_audits_user_workday already exists
+2025-03-20 20:31:36,290 - database_repair - ERROR - Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Slackabot\Slackabot\database_repair.py", line 124, in fix_table_structure
+    cursor.execute("CREATE INDEX idx_audits_user_workday ON audits (user_slack_id, workday)")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: index idx_audits_user_workday already exists
+
+2025-03-20 20:31:36,292 - database_repair - ERROR - Failed to fix table structure. Exiting.
+2025-03-20 20:31:52,408 - database_repair - INFO - Starting database diagnostic and repair...
+2025-03-20 20:31:52,409 - database_repair - INFO - Checking database connections and tables...
+2025-03-20 20:31:52,410 - database_repair - ERROR - ID column is not properly set as primary key
+2025-03-20 20:31:52,411 - database_repair - INFO - Database structure needs repair. Fixing...
+2025-03-20 20:31:52,411 - database_repair - INFO - Fixing table structure...
+2025-03-20 20:31:52,412 - database_repair - INFO - Renaming audits table to audits_backup_1742482912
+2025-03-20 20:31:52,415 - database_repair - INFO - Creating new audits table with correct schema
+2025-03-20 20:31:52,416 - database_repair - INFO - Copying valid data from audits_backup_1742482912
+2025-03-20 20:31:52,417 - database_repair - INFO - Creating index on audits table
+2025-03-20 20:31:52,418 - database_repair - ERROR - Error fixing table structure: index idx_audits_user_workday already exists
+2025-03-20 20:31:52,425 - database_repair - ERROR - Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Slackabot\Slackabot\database_repair.py", line 124, in fix_table_structure
+    cursor.execute("CREATE INDEX idx_audits_user_workday ON audits (user_slack_id, workday)")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: index idx_audits_user_workday already exists
+
+2025-03-20 20:31:52,426 - database_repair - ERROR - Failed to fix table structure. Exiting.
+2025-03-20 20:32:08,008 - database_repair - INFO - Starting database diagnostic and repair...
+2025-03-20 20:32:08,009 - database_repair - INFO - Checking database connections and tables...
+2025-03-20 20:32:08,010 - database_repair - ERROR - ID column is not properly set as primary key
+2025-03-20 20:32:08,011 - database_repair - INFO - Database structure needs repair. Fixing...
+2025-03-20 20:32:08,011 - database_repair - INFO - Fixing table structure...
+2025-03-20 20:32:08,012 - database_repair - INFO - Renaming audits table to audits_backup_1742482928
+2025-03-20 20:32:08,015 - database_repair - INFO - Creating new audits table with correct schema
+2025-03-20 20:32:08,016 - database_repair - INFO - Copying valid data from audits_backup_1742482928
+2025-03-20 20:32:08,017 - database_repair - INFO - Creating index on audits table
+2025-03-20 20:32:08,017 - database_repair - ERROR - Error fixing table structure: index idx_audits_user_workday already exists
+2025-03-20 20:32:08,025 - database_repair - ERROR - Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Slackabot\Slackabot\database_repair.py", line 124, in fix_table_structure
+    cursor.execute("CREATE INDEX idx_audits_user_workday ON audits (user_slack_id, workday)")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: index idx_audits_user_workday already exists
+
+2025-03-20 20:32:08,027 - database_repair - ERROR - Failed to fix table structure. Exiting.
+2025-03-20 20:32:32,651 - database_repair - INFO - Starting database diagnostic and repair...
+2025-03-20 20:32:32,652 - database_repair - INFO - Checking database connections and tables...
+2025-03-20 20:32:32,654 - database_repair - ERROR - ID column is not properly set as primary key
+2025-03-20 20:32:32,654 - database_repair - INFO - Database structure needs repair. Fixing...
+2025-03-20 20:32:32,655 - database_repair - INFO - Fixing table structure...
+2025-03-20 20:32:32,656 - database_repair - INFO - Renaming audits table to audits_backup_1742482952
+2025-03-20 20:32:32,659 - database_repair - INFO - Creating new audits table with correct schema
+2025-03-20 20:32:32,660 - database_repair - INFO - Copying valid data from audits_backup_1742482952
+2025-03-20 20:32:32,661 - database_repair - INFO - Creating index on audits table
+2025-03-20 20:32:32,661 - database_repair - ERROR - Error fixing table structure: index idx_audits_user_workday already exists
+2025-03-20 20:32:32,668 - database_repair - ERROR - Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Slackabot\Slackabot\database_repair.py", line 124, in fix_table_structure
+    cursor.execute("CREATE INDEX idx_audits_user_workday ON audits (user_slack_id, workday)")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: index idx_audits_user_workday already exists
+
+2025-03-20 20:32:32,671 - database_repair - ERROR - Failed to fix table structure. Exiting.
+2025-03-20 20:36:36,376 - database_repair - INFO - Starting database repair...
+2025-03-20 20:36:36,376 - database_repair - INFO - Checking database tables...
+2025-03-20 20:36:36,377 - database_repair - ERROR - ID column is not set as primary key in audits table
+2025-03-20 20:36:36,378 - database_repair - INFO - Database needs structural repair, performing manual fix
+2025-03-20 20:36:36,378 - database_repair - INFO - Starting manual database fix...
+2025-03-20 20:36:36,390 - database_repair - INFO - Manual database fix completed successfully
+2025-03-20 20:36:36,390 - database_repair - INFO - Fixing records for user U06081ECKT3
+2025-03-20 20:36:36,392 - database_repair - INFO - Creating new record for user U06081ECKT3 on 2025-03-20
+2025-03-20 20:36:36,400 - database_repair - INFO - Record created successfully
+2025-03-20 20:36:36,401 - database_repair - INFO - Database repair completed
